@@ -1,0 +1,46 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size:  18px;
+}
+
+.img-back {
+    position: absolute;
+    margin: 0px;
+}
+
+.img-card-front {
+    position: absolute;
+    margin-top: 5em;
+    margin-left: 8em;
+}
+
+.card-logo {
+    position: relative;
+    margin-top: 7em;
+    margin-left: 10em;
+}
+
+.card-info{
+    margin: 0px;
+}
+
+.card-info-number {
+    position: absolute;
+    text-align: center;
+    width: 447px;
+    height: 100px;
+    margin-top: 1em;
+    margin-left: 8em;
+    color: white;
+    background-color: brown;  
+}
+
+.img-card-back {
+    position: relative;
+    margin-top: 12em;
+    margin-left: 15em;
+}
+
+.info-form {
+    align-content: flex-end;
+}
