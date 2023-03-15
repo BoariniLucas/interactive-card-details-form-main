@@ -21,24 +21,51 @@ body {
 }
 
 .card-info{
-    margin: 0px;
-}
-
-.card-info-number {
-    position: absolute;
-    text-align: center;
+    position: relative;    
     width: 447px;
     height: 100px;
     margin-top: 1em;
     margin-left: 8em;
+}
+
+.card-info-number {
+    font-size: 28px;
+    word-spacing: 2px;
+    text-align: center;
+    padding-top: 1em;
+    color: white;     
+}
+
+.card-info-number label {
+    margin: 0px 1%;
+}
+
+.card-info-name {
+    text-align: right;
+    width: 447px;
+    margin-top: 2em;
+    padding-right: 2em;
+    word-spacing: 165px;
+    box-sizing: border-box;
     color: white;
-    background-color: brown;  
+}
+
+.name-card {
+    word-spacing: 0px;
 }
 
 .img-card-back {
-    position: relative;
-    margin-top: 12em;
+    position: absolute;
+    margin-top: 4em;
     margin-left: 15em;
+}
+
+.card-cod {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 9.1em;
+    margin-left: 31em;
+    color: white;
 }
 
 .info-form {
