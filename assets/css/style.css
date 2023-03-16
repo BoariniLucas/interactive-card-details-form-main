@@ -1,11 +1,22 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
     font-size:  18px;
+    background-color: #FFFFFF;
+}
+
+input {
+    font-family: 'Space Grotesk', sans-serif;
+    width: 300px;
+    height: 25px;
 }
 
 .img-back {
     position: absolute;
     margin: 0px;
+}
+
+.container {
+    display: inline-block;
 }
 
 .img-card-front {
@@ -33,7 +44,7 @@ body {
     word-spacing: 2px;
     text-align: center;
     padding-top: 1em;
-    color: white;     
+    color: #FFFFFF;     
 }
 
 .card-info-number label {
@@ -43,11 +54,11 @@ body {
 .card-info-name {
     text-align: right;
     width: 447px;
-    margin-top: 2em;
+    margin-top: 1em;
     padding-right: 2em;
     word-spacing: 165px;
     box-sizing: border-box;
-    color: white;
+    color: #FFFFFF;
 }
 
 .name-card {
@@ -65,9 +76,33 @@ body {
     font-size: 20px;
     margin-top: 9.1em;
     margin-left: 31em;
-    color: white;
+    color: #FFFFFF;
 }
 
 .info-form {
-    align-content: flex-end;
+    float: right;
+    width: 308px;
+    height: 280px;
+    margin-right: 12em;
+    margin-top: -5em;
+
+    background-color: brown;
+}
+
+.info-form label {
+    font-size: 13px;
+}
+
+.info-form input {
+    border-radius: 6px;
+    margin: 5px 0px 10px;
+}
+
+.button-confirm {
+    width: 308px;
+    height: 35px;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    background-color: #220930;
 }
