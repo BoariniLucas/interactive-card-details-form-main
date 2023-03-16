@@ -6,7 +6,7 @@ body {
 
 input {
     font-family: 'Space Grotesk', sans-serif;
-    width: 300px;
+    width: 310px;
     height: 25px;
 }
 
@@ -86,7 +86,7 @@ input {
     margin-right: 12em;
     margin-top: -5em;
 
-    background-color: brown;
+
 }
 
 .info-form label {
@@ -94,13 +94,31 @@ input {
 }
 
 .info-form input {
+    height: 30px;
+    border-style: solid;
+    border-color: #C1BFC3;
     border-radius: 6px;
+    padding-left: 10px;
+    box-sizing: border-box;
     margin: 5px 0px 10px;
 }
 
-.button-confirm {
+.cardExp-mm {
+    width: 60px;
+}
+
+.cardExp-yy {
+    width: 60px;
+}
+
+.card-cvc {
+    width: 100px;
+}
+
+.info-form strong input {
     width: 308px;
     height: 35px;
+    border-style: none;
     border: none;
     border-radius: 6px;
     color: #FFFFFF;
