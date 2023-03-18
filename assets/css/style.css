@@ -10,6 +10,20 @@ input {
     height: 25px;
 }
 
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin: 1rem;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 2rem;
+    }
+
 .img-back {
     position: absolute;
     margin: 0px;
@@ -80,14 +94,13 @@ input {
 }
 
 .info-form {
+      /*  display: none;  */
     float: right;
     width: 310px;
     height: 300px;
     margin-right: 8em;
     margin-top: -5em;
     padding: 50px;
-
-    /* background-color: brown;  */
 }
 
 .info-form label {
@@ -125,14 +138,13 @@ input {
 }
 
 .thank-form {
+    display:  none;
     float: right;
     width: 310px;
     height: 300px;
     margin-right: 8em;
     margin-top: -5em;
     padding: 50px;
-
-     background-color: brown;  
 }
 
 .button-confirm {
@@ -147,5 +159,6 @@ input {
 
 .thank-form img {
     display: block;
-    margin: 1em auto;
+    margin: 1rem auto;
 }
+
