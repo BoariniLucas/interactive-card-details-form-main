@@ -81,12 +81,13 @@ input {
 
 .info-form {
     float: right;
-    width: 308px;
-    height: 280px;
-    margin-right: 12em;
+    width: 310px;
+    height: 300px;
+    margin-right: 8em;
     margin-top: -5em;
+    padding: 50px;
 
-
+    /* background-color: brown;  */
 }
 
 .info-form label {
@@ -103,16 +104,14 @@ input {
     margin: 5px 0px 10px;
 }
 
-.cardExp-mm {
-    width: 60px;
-}
-
-.cardExp-yy {
+.cardExp {
     width: 60px;
 }
 
 .card-cvc {
-    width: 100px;
+    float: right;
+    width: 130px;
+    margin-left: 50px;
 }
 
 .info-form strong input {
@@ -123,4 +122,30 @@ input {
     border-radius: 6px;
     color: #FFFFFF;
     background-color: #220930;
+}
+
+.thank-form {
+    float: right;
+    width: 310px;
+    height: 300px;
+    margin-right: 8em;
+    margin-top: -5em;
+    padding: 50px;
+
+     background-color: brown;  
+}
+
+.button-confirm {
+    width: 308px;
+    height: 35px;
+    border-style: none;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    background-color: #220930;
+}
+
+.thank-form img {
+    display: block;
+    margin: 1em auto;
 }
