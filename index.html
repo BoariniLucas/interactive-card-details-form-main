@@ -16,125 +16,87 @@
 </head>
 <body>
 
-<!-- Imagem findo site -->
+  <main>
+    <!-- Imagem findo site -->
 
-  <img class="img-back" src="./assets/images/bg-main-desktop.png">
+      <img class="img-back" src="./assets/images/bg-main-desktop.png">
 
-<!-- Div contendo imagens dos cartões -->
+    <!-- Div contendo imagens dos cartões -->
 
-  <div class="container">
-    <img class="img-card-front" src="./assets/images/bg-card-front.png">
-    <img class="card-logo" src="./assets/images/card-logo.svg"><br>
-   
-    <div class="card-info">
-      <div class="card-info-number">
-        <label id="number-card-img">0000 0000 0000 0000</label>
+      <div class="container">
+        <img class="img-card-front" src="./assets/images/bg-card-front.png">
+        <img class="card-logo" src="./assets/images/card-logo.svg"><br>
+      
+        <div class="card-info">
+          <div class="card-info-number">
+            <label id="number-card-img">0000 0000 0000 0000</label>
+          </div> 
+          
+          <div class="card-info-name">
+            <label id="name-card-img" class="name-card">Jane Appleseed</label>
+            <label id="month-card-img">00</label>/<label id="year-card-img">00</label>
+          </div> 
+        </div>
+        
+      </div>
+
+      <div>
+        <img class="img-card-back" src="./assets/images/bg-card-back.png">
+        <div class="card-cod">
+          <label id="cod-cvc-img">000</label>
+        </div>
       </div> 
       
-      <div class="card-info-name">
-        <label id="name-card-img" class="name-card">Jane Appleseed</label>
-        <label id="month-card-img">00</label>/00
-      </div> 
-    </div>
-    
-  </div>
 
-  <div>
-    <img class="img-card-back" src="./assets/images/bg-card-back.png">
-    <div class="card-cod">
-      <label id="cod-cvc-img">000</label>
-    </div>
-  </div> 
+    <!-- Div contendo campos para inserir dados dos cartões -->
+
+
+      <div class="info-form">
+
+        <label>Cardholder Name</label>
+        <input id="name-card" oninput="printNameCard(this.value)" placeholder="e.g. Jane Applesee">
+        
+        <label>Card Number</label>
+        <input id="number-card" oninput="maskCard(this), printNumberCard(this.value)" 
+              placeholder="e.g. 1234 5678 9123 0000" maxlength="16" 
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        
+        <label>Exp. Date (MM/YY)</label>
+        <label><strong>CVC</strong></label> <br>
+        
+        <input id="month-card" oninput="printMonthCard(this.value)" type="text" class="cardExp" placeholder="MM" maxlength="2" 
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
+
+        <input id="year-card" oninput="printYearCard(this.value)" type="text" class="cardExp" placeholder="YY" maxlength="2"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
+
+        <input id="card-cvc" oninput="printCVC(this.value)" type="text" class="cardCVC" placeholder="e.g. 123" maxlength="3" 
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+        <strong>
+          <input type="submit" id="btn-confirm" class="button-confirm" value="Confirm">
+        </strong> 
+
+      </div>
+
+    <!-- Thanks fomr -->
+
+      <div class="thanks-form">
+
+        <img class="icon-complete" src="assets/images/icon-complete.svg">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+
+        <input type="submit" id="btn-continue" class="button-confirm" value="Continue">
+        
+        
+      </div>
+  </main>
   
-
-<!-- Div contendo campos para inserir dados dos cartões -->
-
-
-  <div class="info-form">
-
-    <label>Cardholder Name</label>
-    <input id="name-card" oninput="printNameCard(this.value)" placeholder="e.g. Jane Applesee">
-    
-    <label>Card Number</label>
-    <input id="number-card" oninput="maskCard(this), printNumberCard(this.value)" 
-          placeholder="e.g. 1234 5678 9123 0000" maxlength="16" 
-          onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-    
-    <label>Exp. Date (MM/YY)</label>
-    <label>CVC</label> <br>
-    
-    <input type="text" class="cardExp" placeholder="MM" maxlength="2" 
-          onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
-
-    <input type="text" class="cardExp" placeholder="YY" maxlength="2"
-          onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
-
-    <input class="card-cvc" placeholder="e.g. 123" maxlength="3" oninput="printCVC(this.value)"
-          onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-
-    <strong>
-      <input type="submit" id="btn-confirm" class="button-confirm" value="Confirm">
-    </strong> 
-
-  </div>
-
-<!-- Thanks fomr -->
-
-  <div class="thank-form">
-
-    <img class="icon-complete" src="assets/images/icon-complete.svg">
-    <h1>Thank you!</h1>
-    <p>We've added your card details</p>
-
-    <input type="submit" class="button-confirm" value="Continue">
-    
-    
-  </div>
-  
-
-<!--
-
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  -->
-
-
-
-
-
-  <!-- Completed state start -->
-
-  <!--
-
-  Thank you!
-  We've added your card details
-  Continue
-
-  -->
-  
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/BoariniLucas">Lucas Boarini</a>
-  </div>
+  </footer>
 
   <script src="./assets/js/script.js"></script>
 </body>
