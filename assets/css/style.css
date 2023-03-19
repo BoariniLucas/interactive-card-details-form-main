@@ -14,6 +14,17 @@ input {
     height: 25px;
 }
 
+span {
+    display: none;
+    font-size: 10px;
+    color: red;
+}
+
+span strong {
+    display: block;
+    margin-left: 15em;
+}
+
 h1 {
     text-align: center;
     text-transform: uppercase;
@@ -105,6 +116,7 @@ p {
 
 .info-form label {
     font-size: 13px;
+    padding-top: 10px;
 }
 
 .info-form input {
@@ -114,7 +126,7 @@ p {
     border-radius: 6px;
     padding-left: 10px;
     box-sizing: border-box;
-    margin: 5px 0px 10px;
+    margin: 10px 0px 5px;
 }
 
 .cardExp {

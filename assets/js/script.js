@@ -22,22 +22,29 @@ const cardCVC = document.querySelector("#card-cvc");
 const infoForm = document.querySelector('.info-form');
 const thanksForm = document.querySelector('.thanks-form');
 
+    /*  text warning  */
+const textWarningName = document.querySelector('#text-warning-name');
+const textWarningNumber = document.querySelector('#text-warning-number');
+const textWarningExp = document.querySelector('#text-warning-exp');
+const textWarningCVC = document.querySelector('#text-warning-cvc');
+
+
+
 
 /*   --Eventos--   */
 
 btnConfirm.addEventListener("click", () => {
 
-    if (nameCard.value == "" && numberCard.value == "" && monthCard.value == "" && 
-            yearCard.value == "" && cardCVC.value == "")
+    if (nameCard.value == "" || numberCard.value == "" || monthCard.value == "" || cardCVC.value == "" )
     {
-        console.log("Deus certo");
+        textWarningName.style.display = "block";
+        textWarningNumber.style.display = "block";
+        textWarningExp.style.display = "block";
+        textWarningCVC.style.display = "block";
 
-    }
-
-    
-
-    confirmForm();
-     
+    } else { 
+        confirmForm();
+    }     
 });
 
 btnContinue.addEventListener("click", () => {
@@ -110,4 +117,9 @@ function maskCard(i){
 
     cardCVC.value = "";
     codCVCImg.innerHTML = "000";
+
+    textWarningName.style.display = "none";
+    textWarningNumber.style.display = "none";
+    textWarningExp.style.display = "none";
+    textWarningCVC.style.display = "none";
  }

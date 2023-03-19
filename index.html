@@ -55,23 +55,30 @@
 
         <label>Cardholder Name</label>
         <input id="name-card" oninput="printNameCard(this.value)" placeholder="e.g. Jane Applesee">
+        <span id="text-warning-name">Can't be blank</span> <br>
         
         <label>Card Number</label>
         <input id="number-card" oninput="maskCard(this), printNumberCard(this.value)" 
               placeholder="e.g. 1234 5678 9123 0000" maxlength="16" 
               onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        <span id="text-warning-number">Can't be blank</span> <br>
         
         <label>Exp. Date (MM/YY)</label>
         <label><strong>CVC</strong></label> <br>
         
         <input id="month-card" oninput="printMonthCard(this.value)" type="text" class="cardExp" placeholder="MM" maxlength="2" 
               onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
+        
 
         <input id="year-card" oninput="printYearCard(this.value)" type="text" class="cardExp" placeholder="YY" maxlength="2"
               onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
 
         <input id="card-cvc" oninput="printCVC(this.value)" type="text" class="cardCVC" placeholder="e.g. 123" maxlength="3" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"> <br>
+
+        <span id="text-warning-exp">Can't be blank</span> <span id="text-warning-cvc"><strong>Can't be blank</strong></span>
+        
+ 
 
         <strong>
           <input type="submit" id="btn-confirm" class="button-confirm" value="Confirm">
