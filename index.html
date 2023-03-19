@@ -28,12 +28,12 @@
    
     <div class="card-info">
       <div class="card-info-number">
-        <label>0000 0000 0000 0000</label>
+        <label id="number-card-img">0000 0000 0000 0000</label>
       </div> 
       
       <div class="card-info-name">
-        <label class="name-card">Jane Appleseed</label>
-        <label>00/00</label>
+        <label id="name-card-img" class="name-card">Jane Appleseed</label>
+        <label id="month-card-img">00</label>/00
       </div> 
     </div>
     
@@ -42,7 +42,7 @@
   <div>
     <img class="img-card-back" src="./assets/images/bg-card-back.png">
     <div class="card-cod">
-      <label>000</label>
+      <label id="cod-cvc-img">000</label>
     </div>
   </div> 
   
@@ -53,10 +53,11 @@
   <div class="info-form">
 
     <label>Cardholder Name</label>
-    <input placeholder="e.g. Jane Applesee">
+    <input id="name-card" oninput="printNameCard(this.value)" placeholder="e.g. Jane Applesee">
     
     <label>Card Number</label>
-    <input placeholder="e.g. 1234 5678 9123 0000" maxlength="16"
+    <input id="number-card" oninput="maskCard(this), printNumberCard(this.value)" 
+          placeholder="e.g. 1234 5678 9123 0000" maxlength="16" 
           onkeypress="return event.charCode >= 48 && event.charCode <= 57">
     
     <label>Exp. Date (MM/YY)</label>
@@ -68,21 +69,16 @@
     <input type="text" class="cardExp" placeholder="YY" maxlength="2"
           onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
 
-    <input class="card-cvc" placeholder="e.g. 123" maxlength="3"
+    <input class="card-cvc" placeholder="e.g. 123" maxlength="3" oninput="printCVC(this.value)"
           onkeypress="return event.charCode >= 48 && event.charCode <= 57">
 
     <strong>
-      <input type="submit" class="button-confirm" value="Confirm">
+      <input type="submit" id="btn-confirm" class="button-confirm" value="Confirm">
     </strong> 
 
   </div>
 
-
-
-
-
-
-
+<!-- Thanks fomr -->
 
   <div class="thank-form">
 
@@ -139,5 +135,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/BoariniLucas">Lucas Boarini</a>
   </div>
+
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
