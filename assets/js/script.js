@@ -82,7 +82,7 @@ function printCVC(cvc) {
 
 function maskCard(i){
    
-    var v = i.value;
+    let v = i.value;
     
     if(isNaN(v[v.length-1])){ 
        i.value = v.substring(0, v.length-1);
